@@ -7,7 +7,7 @@ class UnauthenticatedPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Authenticated Page'),
+        title: const Text('Unauthenticated Page'),
       ),
       body: const Center(
         child: Text('You are unauthenticated.'),
