@@ -1,13 +1,14 @@
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter/material.dart';
 
-class AuthenticatedPage extends StatelessWidget {
-  const AuthenticatedPage({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Authenticated Page'),
+        title: const Text('Home Page'),
       ),
       body: Center(
         child: Column(
@@ -15,8 +16,14 @@ class AuthenticatedPage extends StatelessWidget {
           children: [
             const Text('Here is only displayed page if user signed in.'),
             FilledButton(
-              onPressed: () {},
               child: const Text('Sign out'),
+              onPressed: () async {
+                try {
+                  await Amplify.Auth.signOut();
+                } on Exception catch (e) {
+                  safePrint('Error signing out: $e');
+                }
+              },
             ),
           ],
         ),
