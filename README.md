@@ -3,6 +3,6 @@
 - [Set up Amplify Auth - Flutter - AWS Amplify Documentation](https://docs.amplify.aws/flutter/build-a-backend/auth/set-up-auth/)
 
 > [!NOTE]
-> `amplify_auth_cognito`を依存追加後に以下のエラーが発生するため、macOSのMinimum Deployment Targetを13.0に引き上げています。
+> Support macOS minimum deployment target for 13.0 or higher because `amplify_auth_cognito` plugin occurs error if lower target as follows.
 
 > Specs satisfying the `(amplify_auth_cognito`)` dependency were found, but they required a higher minimum deployment target.
