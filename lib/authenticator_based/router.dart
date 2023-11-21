@@ -1,8 +1,9 @@
 import 'package:amplify_authenticator/amplify_authenticator.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_amplify_auth_sampler/home_page.dart';
-import 'package:flutter_amplify_auth_sampler/signin_page.dart';
 import 'package:go_router/go_router.dart';
+
+import 'home_page.dart';
+import 'signin_page.dart';
 
 final router = GoRouter(
   debugLogDiagnostics: kDebugMode,
