@@ -3,6 +3,7 @@
 - [Set up Amplify Auth - Flutter - AWS Amplify Documentation](https://docs.amplify.aws/flutter/build-a-backend/auth/set-up-auth/)
 - [Set up Amplify CLI - JavaScript - AWS Amplify Documentation](https://docs.amplify.aws/javascript/tools/cli/start/set-up-cli/#configure-the-amplify-cli)
 - [Platform setup - Flutter - AWS Amplify Documentation](https://docs.amplify.aws/flutter/start/project-setup/platform-setup/)
+- [Authenticator | Amplify UI for Flutter](https://ui.docs.amplify.aws/flutter/connected-components/authenticator)
 
 ## Platform setup
 
