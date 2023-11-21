@@ -2,6 +2,7 @@ import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_authenticator/amplify_authenticator.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_amplify_auth_sampler/router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'amplifyconfiguration.dart';
@@ -43,13 +44,8 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return Authenticator(
-      child: MaterialApp(
-        builder: Authenticator.builder(),
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text(''),
-          ),
-        ),
+      child: MaterialApp.router(
+        routerConfig: router,
       ),
     );
   }
