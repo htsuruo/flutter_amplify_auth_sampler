@@ -3,7 +3,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'authenticator.g.dart';
 
-@riverpod
+@Riverpod(keepAlive: true)
 class Authenticator extends _$Authenticator {
   @override
   FutureOr<AuthUser?> build() async {

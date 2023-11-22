@@ -6,12 +6,12 @@ part of 'authenticator.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$authenticatorHash() => r'5c7b9864e34905bbe48c4b88518ec4430230812b';
+String _$authenticatorHash() => r'b6ac6794bb9fec798ceba2dacc8fcd6de956d1e9';
 
 /// See also [Authenticator].
 @ProviderFor(Authenticator)
 final authenticatorProvider =
-    AutoDisposeAsyncNotifierProvider<Authenticator, AuthUser?>.internal(
+    AsyncNotifierProvider<Authenticator, AuthUser?>.internal(
   Authenticator.new,
   name: r'authenticatorProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -21,6 +21,6 @@ final authenticatorProvider =
   allTransitiveDependencies: null,
 );
 
-typedef _$Authenticator = AutoDisposeAsyncNotifier<AuthUser?>;
+typedef _$Authenticator = AsyncNotifier<AuthUser?>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
