@@ -1,10 +1,10 @@
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_amplify_auth_sampler/authenticator_based/authenticator_based.dart';
+import 'package:flutter_amplify_auth_sampler/riverpod_based/riverpod_based.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../amplifyconfiguration.dart';
+import 'amplifyconfiguration.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +18,8 @@ Future<void> main() async {
 
   runApp(
     const ProviderScope(
-      child: AuthenticatorBasedApp(),
+      child: RiverpodBasedApp(),
+      // child: AuthenticatorBasedApp(),
     ),
   );
 }

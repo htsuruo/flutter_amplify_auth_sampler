@@ -13,11 +13,9 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_riverpod:
-  gap:
   go_router:
   riverpod:
   riverpod_annotation:
-  simple_logger:
 
 dev_dependencies:
   build_runner:
