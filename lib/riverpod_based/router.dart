@@ -40,10 +40,10 @@ GoRouter router(RouterRef ref) {
       ),
     ],
     redirect: (context, state) async {
-      final user = await ref.read(authenticatorProvider.future);
+      final isSignedIn = isAuth.value.requireValue;
       final location = state.uri.toString();
       final isSigninLocation = location == '/';
-      if (user == null) {
+      if (!isSignedIn) {
         return isSigninLocation ? null : '/';
       }
       if (isSigninLocation) {

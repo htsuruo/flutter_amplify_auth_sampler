@@ -7,16 +7,25 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final user = ref.watch(authenticatorProvider).value;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Page'),
       ),
       body: Center(
-        child: FilledButton(
-          child: const Text('Sign out'),
-          onPressed: () {
-            ref.read(authenticatorProvider.notifier).signOut();
-          },
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text('userId: ${user?.userId ?? '---'}'),
+            Text('username: ${user?.username ?? '---'}'),
+            const SizedBox(height: 40),
+            FilledButton(
+              child: const Text('Sign out'),
+              onPressed: () {
+                ref.read(authenticatorProvider.notifier).signOut();
+              },
+            ),
+          ],
         ),
       ),
     );
