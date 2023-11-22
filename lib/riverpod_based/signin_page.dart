@@ -14,16 +14,12 @@ class SigninPage extends ConsumerWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(40),
-          child: Form(
-            child: Column(
-              children: [
-                FilledButton(
-                  child: const Text('Sign in'),
-                  onPressed: () {
-                    ref.read(authenticatorProvider.notifier).signIn();
-                  },
-                ),
-              ],
+          child: Center(
+            child: FilledButton(
+              child: const Text('Sign in'),
+              onPressed: () {
+                ref.read(authenticatorProvider.notifier).signIn();
+              },
             ),
           ),
         ),
