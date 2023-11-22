@@ -1,4 +1,3 @@
-import 'package:amplify_authenticator/amplify_authenticator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -9,10 +8,8 @@ class RiverpodBasedApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Authenticator(
-      child: MaterialApp.router(
-        routerConfig: ref.watch(routerProvider),
-      ),
+    return MaterialApp.router(
+      routerConfig: ref.watch(routerProvider),
     );
   }
 }
